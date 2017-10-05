@@ -66,13 +66,26 @@ public  class Panier{
   public boolean estVide()
   {
 
-     if (panier.size()==0)
-          return true;
-             return false ;
+             return panier.size()==0 ;
 
    }
   
+    @Override
+  public String toString(){
+        String res ="";
+        
+      
+        for (Orange o : panier)
+        {
+            res += o.toString() + "\n";
+        }    
+        
   
+      return res;
+  }
+          
+          
+          
   public void Ajout (Orange o)
   
   {
@@ -96,6 +109,10 @@ public  class Panier{
               System.out.println("votre panier est vide");
     
    }
+
+    private void printf(String la_liste_des_oranges_dans_le_panier) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   
    
 
