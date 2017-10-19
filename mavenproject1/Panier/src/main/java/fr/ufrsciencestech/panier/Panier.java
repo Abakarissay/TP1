@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public  class Panier{
     private int taillemax ;
     
-    private ArrayList<Orange> panier ;
+    private ArrayList<Fruit> panier ;
     
     
     /**
@@ -35,14 +35,14 @@ public  class Panier{
     /**
      * @return the panier
      */
-    public ArrayList<Orange> getPanier() {
+    public ArrayList<Fruit> getPanier() {
         return panier;
     }
 
     /**
      * @param panier the panier to set
      */
-    public void setPanier(ArrayList<Orange> panier) {
+    public void setPanier(ArrayList<Fruit> panier) {
         this.panier = panier;
     }
     
@@ -51,9 +51,8 @@ public  class Panier{
     {
        this.taillemax = t;
     
-          this.panier= new ArrayList<Orange> (t);
+          this.panier= new ArrayList<Fruit> (t);
     }
-
 
   public boolean estPlein()
   {
@@ -75,9 +74,9 @@ public  class Panier{
         String res ="";
         
       
-        for (Orange o : panier)
+        for (Fruit f : panier)
         {
-            res += o.toString() + "\n";
+            res += f.toString() + "\n";
         }    
         
   
@@ -86,11 +85,11 @@ public  class Panier{
           
           
           
-  public void Ajout (Orange o)
+  public void Ajout (Fruit f)
   
   {
       if (!estPlein())
-          panier.add(o);
+          panier.add(f);
            else 
               System.out.println("votre panier est plein");
     
@@ -100,17 +99,17 @@ public  class Panier{
     
   
   
-    public void Retire (Orange o)
+    public void Retire (Fruit f)
   
   {
       if (!estVide())
-          panier.remove(o);
+          panier.remove(f);
            else 
               System.out.println("votre panier est vide");
     
    }
 
-    private void printf(String la_liste_des_oranges_dans_le_panier) {
+    private void printf(String la_liste_des_fruits_dans_le_panier) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
   

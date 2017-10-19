@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  * @author sa665519
  */
 
-public class Orange {
+public class Orange implements Fruit {
 
     private static Object get() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -55,13 +55,23 @@ public class Orange {
      
     @Override
      public String toString(){
-        String res ="";
+        String res ="Orange  ";
         res += "origine = " + pays + "\t";
         res += "prix = " + prix;
         
       return res;
      
      }
+     
+    @Override
+    public boolean equals(Object o){
+        if(o != null && o instanceof Orange){
+            Orange or = (Orange) o;
+            return (prix == or.prix && pays.equals(or.pays));
+        }
+        return false;
+    }
+     
 }
 
 
